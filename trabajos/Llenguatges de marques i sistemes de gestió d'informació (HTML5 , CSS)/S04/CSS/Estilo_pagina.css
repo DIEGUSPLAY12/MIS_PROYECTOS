@@ -1,0 +1,62 @@
+
+
+
+#header {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(84,120,193);
+    color: white;
+}
+
+#section1 {
+    font-family: 'Roboto', sans-serif;
+    
+    background: rgba(210,223,251,0.8);
+    
+}
+
+#section1:hover {
+    background: rgb(10,15,24);
+    color: white;
+}
+
+
+#section2 {
+    font-family: 'Roboto', sans-serif;
+    
+    background: rgba(210,223,251,0.8);
+    
+}
+
+#section2:hover {
+    background: rgb(10,15,24);
+    color: white;
+}
+
+footer{ 
+    font-family: 'Roboto', sans-serif;
+     background:  rgb(84,120,193);
+     color: white;
+}
+
+h3{
+    font-size: 1.3rem;
+    color: rgb(73,105,169) 
+}
+
+#letra{
+    color: rgb(73,105,169) 
+}
+
+
+
+h2{
+    color: rgb(73,105,169) 
+}
+
+span:{
+    font-weight: bold;
+}
+a:hover{
+    color:black
+}
+

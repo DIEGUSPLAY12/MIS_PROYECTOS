@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #dbcf5c;
+}
+
+html {
+  font-size: 1.5rem;
+}
+hr{
+  border: none;
+  color: #dbcf5c;
+  background-color:#dbcf5c;
+  height: 5px;
+}
+
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: white;
+}
+
+p{
+  background-color: white;
+}
+
+section{
+  background-color: white;
+  border-left: 30px solid white;
+}
+a{
+  color: #dbcf5c;
+  font-size: 2rem;
+  border-left: 40px solid white;
+}
+
+.parallax {
+ 
+  background-image: url('../img/olive-oil_1920.jpg');
+  height: 20vw;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+#titulo1{
+  background-color: white;
+  border-bottom: 2px var(--primary-color);
+  border-radius: 0 0 15px 15px;
+}
