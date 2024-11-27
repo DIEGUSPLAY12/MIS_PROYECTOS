@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS Coleccion;
 
 
 CREATE TABLE Usuario (
+    
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     DNI CHAR(9) NOT NULL,
     email VARCHAR(100) NOT NULL,
