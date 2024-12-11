@@ -1,0 +1,39 @@
+body{
+    background-image: url("./istockphoto-1206505233-612x612.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    height: 100vh; 
+    margin: 0; 
+}
+.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    animation:slide 4s forwards;
+}
+
+#foto {
+    width: 650px;
+    height: 500px;
+    animation: spin 3s linear infinite;
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateX(-60%);
+    }
+    100% {
+        transform: translateX(-4.5%);
+    }
+}
