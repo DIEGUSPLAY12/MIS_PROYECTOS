@@ -1,0 +1,108 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    text-align: center;
+}
+
+.icon {
+
+    width: 100px;
+    height: auto;
+    display: none; 
+    margin-bottom: 20px;
+}
+
+.title {
+
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 20px; 
+    display: none;
+
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: orange;
+    }
+
+    .icon.phone {
+        display: block;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .title::after {
+        content: 'Phone';
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        background-color: green;
+    }
+
+    .icon.tablet {
+        display: block;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .title::after {
+        content: 'Tablet';
+    }
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    body {
+        background-color: red;
+    }
+
+    .icon.laptop {
+        display: block;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .title::after {
+        content: 'Laptop';
+    }
+}
+
+
+@media (min-width: 1201px) {
+    body {
+        background-color: blue;
+    }
+
+    .icon.desktop {
+        display: block;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .title::after {
+        content: 'Desktop';
+    }
+}
