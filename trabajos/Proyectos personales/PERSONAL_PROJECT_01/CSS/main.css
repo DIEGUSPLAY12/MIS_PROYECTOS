@@ -1,12 +1,11 @@
 /* Fondo para el section (header) */
 #encabezado {
-    background-color: aqua;
-    padding: 20px; /* Esto agrega un poco de espacio alrededor de los elementos */
+    background-color:
     display: flex; /* Usamos flexbox para distribuir los elementos dentro de la sección */
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
     position: relative; /* Necesario para la posición absoluta de los botones */
-    
+    padding: 25px;/* Esto agrega un poco de espacio alrededor de los elementos */
 }
 hr {
     border-width: 5px; /* Define el grosor de la línea */
@@ -23,16 +22,13 @@ hr {
     margin-top: 0; /* Ajusta el margen superior si es necesario */
 }
 
-
-
-
-
 header {
     position: absolute;
     top: 20px; /* Ajusta la distancia desde la parte superior */
     right: 20px; /* Ajusta la distancia desde la parte derecha */
     display: flex;
     gap: 15px; /* Espaciado entre los botones */
+    
 }
 
 
