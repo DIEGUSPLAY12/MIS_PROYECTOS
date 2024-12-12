@@ -30,7 +30,25 @@ img {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.top-menu {
+    display: flex;
+    justify-content: center; /* Centra los enlaces dentro del contenedor */
+    gap: 20px; /* Espaciado entre los enlaces */
+    background-color: #333;
+    padding: 10px 0;
+}
 
+/* Estilo para los enlaces */
+.top-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+}
 .navigation ul {
     list-style: none;
     display: flex;
@@ -49,7 +67,7 @@ img {
 /* Hero Section */
 .hero-section {
     background: url('./stand_zshop-1.webp') no-repeat center center/cover;
-    color: black;
+    color: rgb(65, 65, 65);
     text-align: center;
     padding: 5rem 2rem;
 }
@@ -105,6 +123,7 @@ img {
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .product-card h3 {
