@@ -16,7 +16,7 @@ img {
     display: block;
 }
 
-/* Header */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -32,13 +32,13 @@ img {
 }
 .top-menu {
     display: flex;
-    justify-content: center; /* Centra los enlaces dentro del contenedor */
-    gap: 20px; /* Espaciado entre los enlaces */
+    justify-content: center; 
+    gap: 20px; 
     background-color: #333;
     padding: 10px 0;
 }
 
-/* Estilo para los enlaces */
+
 .top-menu a {
     color: white;
     text-decoration: none;
@@ -64,7 +64,7 @@ img {
     color: #f0c040;
 }
 
-/* Hero Section */
+
 .hero-section {
     background: url('./stand_zshop-1.webp') no-repeat center center/cover;
     color: rgb(65, 65, 65);
