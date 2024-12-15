@@ -97,12 +97,16 @@ img {
     cursor: pointer;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .main-image img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .product-details {
@@ -139,6 +143,7 @@ img {
     border-radius: 3px;
     cursor: pointer;
     border: 1px solid #ddd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
 
 }

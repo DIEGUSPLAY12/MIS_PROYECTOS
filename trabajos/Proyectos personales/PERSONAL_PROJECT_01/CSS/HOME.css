@@ -154,7 +154,20 @@ img {
     background-color: #f0c040;
     color: #333;
 }
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
 
+.discount {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+
+.green-text {
+    color: green;
+}
 /* Footer */
 .footer {
     background-color: #333;
