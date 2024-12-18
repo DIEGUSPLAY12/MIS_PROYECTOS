@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estrella de 6 puntes</title>
-  <style>
+
     body {
       display: flex;
       justify-content: center;
@@ -15,16 +9,19 @@
     }
 
     .estrella {
+    position: relative;
+    top: -25px;
       display: flex;
       justify-content: center;
       align-items: center;
+      
     }
 
     .estrella::before {
       content: "";
       position: absolute;
       width: 0;
-      height: 75px;
+      height: 0;   
       border-left: 100px solid transparent;
       border-right: 100px solid transparent;
       border-bottom: 200px solid goldenrod;
@@ -33,17 +30,12 @@
 
     .estrella::after {
       content: "";
-      position: absolute;
+      position: relative;
       width: 0;
       height: 0;
+      top: -40px;
       border-left: 100px solid transparent;
       border-right: 100px solid transparent;
       border-top: 200px solid goldenrod;
       transform: translateY(50%) rotate(0deg);
     }
-  </style>
-</head>
-<body>
-  <div class="estrella"></div>
-</body>
-</html>
