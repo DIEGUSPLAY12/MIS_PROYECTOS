@@ -1,15 +1,14 @@
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-    }
-
-    .estrella {
-      position: relative;
+.estrella {
+     position: relative;
       top: -25px;
       display: flex;
       justify-content: center;
