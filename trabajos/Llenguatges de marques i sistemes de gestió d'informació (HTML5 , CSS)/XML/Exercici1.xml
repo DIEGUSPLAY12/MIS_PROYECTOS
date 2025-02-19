@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lliga>
+    <Jugador>
+        <DadesPersonals>
+            <Nom>Vinícius</Nom>
+            <Cognoms>Júnior</Cognoms>
+            <Adreca>Madrid, Espanya</Adreca>
+            <DataNaixement>2000-07-12</DataNaixement>
+        </DadesPersonals>
+        <Temporades>
+            <Temporada any="2021-2022" equip="Real Madrid" dorsal="20">
+                <Jornada num="1">
+                    <MinutsJugats>90</MinutsJugats>
+                    <Gols>1</Gols>
+                </Jornada>
+                <Jornada num="2">
+                    <MinutsJugats>85</MinutsJugats>
+                    <Gols>2</Gols>
+                </Jornada>
+            </Temporada>
+            <Temporada any="2022-2023" equip="Real Madrid" dorsal="20">
+                <Jornada num="1">
+                    <MinutsJugats>88</MinutsJugats>
+                    <Gols>1</Gols>
+                </Jornada>
+                <Jornada num="2">
+                    <MinutsJugats>90</MinutsJugats>
+                    <Gols>0</Gols>
+                </Jornada>
+            </Temporada>
+        </Temporades>
+    </Jugador>
+    <Jugador>
+        <DadesPersonals>
+            <Nom>Kylian</Nom>
+            <Cognoms>Mbappé</Cognoms>
+            <Adreca>París, França</Adreca>
+            <DataNaixement>1998-12-20</DataNaixement>
+        </DadesPersonals>
+        <Temporades>
+            <Temporada any="2021-2022" equip="Paris Saint-Germain" dorsal="7">
+                <Jornada num="1">
+                    <MinutsJugats>90</MinutsJugats>
+                    <Gols>1</Gols>
+                </Jornada>
+                <Jornada num="2">
+                    <MinutsJugats>87</MinutsJugats>
+                    <Gols>2</Gols>
+                </Jornada>
+            </Temporada>
+            <Temporada any="2022-2023" equip="Paris Saint-Germain" dorsal="7">
+                <Jornada num="1">
+                    <MinutsJugats>88</MinutsJugats>
+                    <Gols>2</Gols>
+                </Jornada>
+                <Jornada num="2">
+                    <MinutsJugats>90</MinutsJugats>
+                    <Gols>1</Gols>
+                </Jornada>
+            </Temporada>
+        </Temporades>
+    </Jugador>
+</Lliga>
