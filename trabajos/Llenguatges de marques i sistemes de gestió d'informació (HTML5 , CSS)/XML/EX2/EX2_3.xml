@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concessionari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="concessionari.xsd">
+    <cotxe>
+        <codi>C001</codi>
+        <marca>BMW</marca>
+        <model>Serie 3</model>
+        <matricula>1234-ABC</matricula>
+        <potencia>184</potencia>
+        <places>5</places>
+        <nombre_portes>4</nombre_portes>
+    </cotxe>
+    <cotxe>
+        <codi>C002</codi>
+        <marca>Audi</marca>
+        <model>A4</model>
+        <matricula>5678-DEF</matricula>
+        <potencia>150</potencia>
+        <places>5</places>
+        <nombre_portes>4</nombre_portes>
+    </cotxe>
+</concessionari>
