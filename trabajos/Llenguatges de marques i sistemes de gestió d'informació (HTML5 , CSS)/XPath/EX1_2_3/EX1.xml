@@ -1,0 +1,85 @@
+<!--Exercici 1-->
+<!--L'objectiu d'aquesta activitat és utilitzar expressions XPATH per a extreure resultats d'un document XML. Donat el document XML "books.xml" que tens en SALLENET, escriu les expressions XPATH que permetin accedir a la següent informació:-->
+
+<!--Els títols de tots els llibres. La sortida ha de ser:-->
+          Everyday Italia, Harry Potter, XQuery Kick Start, Learning XML
+
+          Respuesta://book/title/text()
+
+        
+<!--L'element <title> del primer llibre. La sortida ha de ser:-->
+          <title lang="en">Everyday Italian</title>
+
+          Respuesta://book[1]/title
+
+
+        
+<!--Els preus de tots els llibres. La sortida ha de ser:-->
+          30.00, 29.99, 49.99, 39.95
+
+          Respuesta://book/price/text()
+
+
+        
+<!--Els títols dels llibres el preu dels quals > 35. La sortida ha de ser:-->
+          XQuery Kick Start, Learning XML
+
+          Respuesta://book[price > 35]/title/text()
+
+
+        
+<!--Els elements <book> que la seva category="CHILDREN". La sortida ha de ser:-->
+          <book category="CHILDREN">
+            <title lang="en">Harry Potter</title>
+            <author>J K. Rowling</author>
+            <year>2005</year>
+            <price>29.99</price>
+          </book>
+
+          Respuesta://book[@category="CHILDREN"]
+
+        
+<!--Els elements <book> de l'any 2005 (year=2005) i el preu del qual sigui 30 (price=30). La sortida ha de ser:-->
+          <book category="COOKING">
+            <title lang="en">Everyday Italian</title>
+            <author>Giada De Laurentiis</author>
+            <year>2005</year>
+            <price>30.00</price>
+          </book>
+
+          Respuesta://book[year=2005 and price=30]
+
+        
+<!--Els elements <book> l'any de publicació dels quals (year) coincideixi amb l'any de publicació del llibre que té per títol "Everyday Italian". La sortida ha de ser:-->
+          <book category="COOKING">
+            <title lang="en">Everyday Italian</title>
+            <author>Giada De Laurentiis</author>
+            <year>2005</year>
+            <price>30.00</price>
+          </book>
+          <book category="CHILDREN">
+            <title lang="en">Harry Potter</title>
+            <author>J K. Rowling</author>
+            <year>2005</year>
+            <price>29.99</price>
+          </book>
+        
+        Respuesta://book[year = //book[title="Everyday Italian"]/year]
+
+<!--Els títols dels llibres la categoria dels quals coincideixi amb la categoria del llibre seu títol és 'XQuery Kick Start'. La sortida ha de ser:-->
+          XQuery Kick Start, Learning XML
+
+          Respuesta://book[@category = //book[title="XQuery Kick Start"]/@category]/title/text()
+
+        
+<!--L'element <author> del llibre el títol del qual és 'XQuery Kick Start', on el nom de l'autor comença per 'K'. La sortida ha de ser:-->
+          <author>Kurt Cagle</author>
+
+          Respuesta://book[title="XQuery Kick Start"]/author[starts-with(text(), 'K')]
+
+        
+<!--Títol dels llibres el títol dels quals contingui 'XM'. La sortida ha de ser:-->
+          Learning XML
+
+          Respuesta://book[contains(title, 'XM')]/title/text()
+

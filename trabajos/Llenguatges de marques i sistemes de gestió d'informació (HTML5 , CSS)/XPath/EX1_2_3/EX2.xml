@@ -1,0 +1,49 @@
+<!--Exercici 2-->
+<!--L'objectiu d'aquesta activitat és utilitzar expressions XPATH per a extreure resultats d'un document XML. Donat el document XML "notes_alumnes.xml" que tens en SALLENET, escriu les expressions XPATH que responguin a les següents preguntes:-->
+
+<!--Quins cicles s'imparteixen en l'institut? La sortida ha de ser:-->
+          Administració de Sistemes Informàtics i Xarxes, Sistemes Microinformàtics i Xarxes, Gestió Administrativa, Administració i Finances
+
+          Respuesta://cicle/text()
+
+
+<!--Quins cicles de grau mitjà s'imparteixen en l'institut? La sortida ha de ser:-->
+          Sistemes Microinformàtics i Xarxes, Gestió Administrativa
+
+          Respuesta://cicle[@grau="Mig"]/text()
+
+
+<!--Els noms dels alumnes suspesos. La sortida ha de ser:-->
+          Albert Bru, Santiago Rabassa, Jaume Capmany, Samuel Barnadas, Juanjo Roig, Judith González, Gori Puig
+
+          Respuesta://alumne[@aprovat="NO"]/nom/text()
+
+
+<!--Quantes dones cursen el cicle de ASIX? La sortida ha de ser:-->
+          1
+
+          Respuesta:count(//classe[@nom="ASIX"]/alumne[genere="Dona"])
+
+
+<!--Nom dels alumnes suspesos que tenen compte de hotmail. La sortida ha de ser:-->
+          Gori Puig
+
+          Respuesta://alumne[@aprovat="NO"][contains(email, "hotmail")]/nom/text()
+
+
+<!--Nom dels cicles on hi ha alumnes que tenen un 10. La sortida ha de ser:-->
+          ASIX, AF
+
+          Respuesta://classe[alumne[nota="10"]]/@nom
+
+
+<!--Quants alumnes han aprovat ASIX? La sortida ha de ser:-->
+          5
+
+          Respuesta:count(//classe[@nom="ASIX"]/alumne[@aprovat="SI"])
+
+
+<!--Quin percentatge d'aprovats té el centre? La sortida ha de ser:-->
+          71.43%
+
+          Respuesta:concat(round(100 * count(//alumne[@aprovat="SI"]) div count(//alumne), 2), "%")

@@ -1,0 +1,24 @@
+<editorial>
+    <libro>
+        <titulo>El quinto punto cardinal</titulo>
+        <autor>Javier Sachez</autor>
+        <premio>Premio de novela Juan José Plans 2017</premio>
+        <fechaPublicacion año="2017"/>
+        <codigoPostal>06253</codigoPostal>
+    </libro>
+    <libro>
+        <titulo>Pantaleón y las visitadoras</titulo>
+        <autor>Mario Vargas Llosa</autor>
+        <premio>Premio Latinoamericano de Literatura</premio>
+        <fechaPublicacion año="1973"/>
+        <codigoPostal>05683</codigoPostal>
+    </libro>
+    <libro>
+        <titulo>Middletown: A study in american culture</titulo>
+        <autor>Robert Lynd</autor>
+        <autor>Helen Lynd</autor>
+        <premio/>
+        <fechaPublicacion año="1929"/>
+        <codigoPostal>08024</codigoPostal>
+    </libro>
+</editorial>

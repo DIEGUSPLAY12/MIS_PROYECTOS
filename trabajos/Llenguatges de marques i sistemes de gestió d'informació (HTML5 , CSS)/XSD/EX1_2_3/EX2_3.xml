@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<concessionari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="concessionari.xsd">
+<concessionari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EX2_3.xsd">
     <cotxe>
         <codi>C001</codi>
         <marca>BMW</marca>
