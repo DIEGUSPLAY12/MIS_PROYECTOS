@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>AS.com - Últimas Noticias</title>
+        <link>https://as.com</link>
+        <description>Últimas noticias de deportes en AS.com</description>
+        <language>es</language>
+        
+        <item>
+            <title>Real Madrid gana el Clásico</title>
+            <link>https://as.com/futbol/real-madrid-gana-el-clasico.html</link>
+            <description>El Real Madrid vence al Barcelona en un partido épico.</description>
+            <pubDate>Tue, 13 Feb 2025 10:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Messi habla sobre su futuro</title>
+            <link>https://as.com/futbol/messi-habla-sobre-su-futuro.html</link>
+            <description>El astro argentino revela detalles sobre su próximo destino.</description>
+            <pubDate>Tue, 13 Feb 2025 12:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Últimos fichajes de invierno</title>
+            <link>https://as.com/futbol/ultimos-fichajes-invierno.html</link>
+            <description>Los equipos europeos cierran sus plantillas con importantes refuerzos.</description>
+            <pubDate>Tue, 13 Feb 2025 15:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

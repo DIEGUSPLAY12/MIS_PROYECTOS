@@ -1,0 +1,17 @@
+<!--Exercici 3-->
+<!--L'objectiu d'aquesta activitat és utilitzar expressions XPATH per a extreure resultats d'un document XML. A partir del document "prevision.xml" que disposes a SALLENET que conté informació sobre la previsió meteorològica en diferents poblacions de Catalunya al Maig 2018, escriu les expressions XPATH que responguin a les següents preguntes:-->
+
+<!--Quin temps farà a Girona el 23 Maig 14.00h? La sortida ha de ser:-->
+          Respuesta://poblacio[nom="Girona"]/prediccio[dia="2018-05-23"]/hora[@valor="14:00"]/temps/text()
+
+
+<!--Quina quantitat d'aigua caurà a Salt el dia 22 Maig? La sortida ha de ser:-->
+          Respuesta://poblacio[nom="Salt"]/prediccio[dia="2018-05-22"]/precipitacio/text()
+
+
+<!--Quins dies plourà a Olot? La sortida ha de ser:-->
+          Respuesta://poblacio[nom="Olot"]/prediccio[precipitacio>0]/dia/text()
+
+
+<!--Nom de les poblacions on hi haurà 24 graus a les 08.00h. La sortida ha de ser:-->
+          Respuesta://poblacio[prediccio/hora[@valor="08:00"]/temperatura="24"]/nom/text()
