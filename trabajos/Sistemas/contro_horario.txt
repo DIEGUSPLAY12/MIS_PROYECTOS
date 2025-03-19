@@ -1,0 +1,118 @@
+#!/bin/bash
+
+archivo_entrada="entrada-sortida.txt"
+archivo_total="total_tiempos.txt"
+
+usuario_encontrado=false
+
+# Verificar usuario
+while [ "$usuario_encontrado" == false ]; do
+    echo "Introduce el nombre del usuario:"
+    read nombre
+
+    for line in $(<usuarios.txt); do
+        nombre_usuario=$(echo $line | awk -F, '{print $2}')
+       
+        if [ "$nombre_usuario" == "$nombre" ]; then
+            echo "Usuario encontrado: $nombre_usuario"
+            usuario_encontrado=true
+            break
+        fi
+    done
+
+    if [ "$usuario_encontrado" == false ]; then
+        echo "El usuario $nombre no se encuentra en la lista. Intenta nuevamente."
+    fi
+done
+
+echo "¿Quieres fichar entrada o salida? (entrada/salida)"
+read accion
+
+registrar_entrada() {
+    # Verificar si ya hay una entrada registrada para este usuario
+    if grep -q "^$nombre " "$archivo_entrada"; then
+        echo "Error: Ya has fichado entrada. No puedes fichar otra sin haber fichado salida."
+    else
+        fecha_hora=$(date "+%Y-%m-%d %H:%M:%S")
+        echo "$nombre $fecha_hora entrada" >> "$archivo_entrada"
+        echo "Entrada registrada para $nombre a las $fecha_hora"
+    fi
+}
+
+registrar_salida() {
+    # Verificar si el usuario tiene una entrada activa
+    if grep -q "^$nombre " "$archivo_entrada"; then
+        entrada=$(grep "^$nombre " "$archivo_entrada" | tail -n 1 | awk '{print $2, $3}')
+        salida=$(date "+%Y-%m-%d %H:%M:%S")
+
+        # Convertir fechas a segundos
+        entrada_segundos=$(date -d "$entrada" +%s)
+        salida_segundos=$(date -d "$salida" +%s)
+        duracion=$((salida_segundos - entrada_segundos))
+
+        # Guardar el tiempo trabajado
+        echo "$nombre $duracion" >> "$archivo_total"
+
+        # Eliminar la entrada del usuario en 'entrada-sortida.txt'
+        grep -v "^$nombre " "$archivo_entrada" > temp.txt && mv temp.txt "$archivo_entrada"
+
+        horas=$((duracion / 3600))
+        minutos=$(((duracion % 3600) / 60))
+        segundos=$((duracion % 60))
+
+        echo "Salida registrada para $nombre. Tiempo trabajado: $horas horas, $minutos minutos y $segundos segundos."
+    else
+        echo "Error: No puedes fichar salida sin haber fichado entrada primero."
+    fi
+}
+
+if [ "$accion" == "entrada" ]; then
+    registrar_entrada
+elif [ "$accion" == "salida" ]; then
+    registrar_salida
+else
+    echo "Acción no válida. Debes elegir entre 'entrada' o 'salida'."
+fi
+
+
+
+
+#!/bin/bash
+
+archivo_total="total_tiempos.txt"
+
+calcular_tiempo_total() {
+    echo "Ingrese el nombre del usuario para calcular el tiempo total trabajado:"
+    read nombre
+
+    if grep -q "$nombre" "$archivo_total"; then
+        total_segundos=0
+
+        while read -r line; do
+            usuario=$(echo "$line" | awk '{print $1}')
+            tiempo=$(echo "$line" | awk '{print $2}')
+            if [ "$usuario" == "$nombre" ]; then
+                total_segundos=$((total_segundos + tiempo))
+            fi
+        done < "$archivo_total"
+
+        horas=$((total_segundos / 3600))
+        minutos=$(((total_segundos % 3600) / 60))
+        segundos=$((total_segundos % 60))
+
+        echo "Total tiempo trabajado por $nombre: $horas horas, $minutos minutos y $segundos segundos."
+    else
+        echo "No hay registros de trabajo para el usuario $nombre."
+    fi
+}
+
+echo "¿Quieres calcular el tiempo total trabajado de algún usuario? (si/no)"
+read respuesta
+
+if [ "$respuesta" == "si" ]; then
+    calcular_tiempo_total
+else
+    echo "Operación cancelada."
+fi
+
+controlador_horario.sh   muestra_de_horas.sh entrada-sortida.txt  total_tiempos.txt  usuarios.txtr
