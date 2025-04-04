@@ -75,20 +75,26 @@ img {
     color: rgb(65, 65, 65);
     text-align: center;
     padding: 5rem 2rem;
-    border: 6px solid #333; /* Tamaño y color del borde */
+    border: 6px solid #333; 
+    
 }
+
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-.hlo{
+.hlo {
     background-color: white;
-    border: 2px solid rgb(65, 63, 63); /* Tamaño y color del borde */
-    padding: 5px; /* Espacio interno opcional */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    border: 2px solid rgb(65, 63, 63); 
+    padding: 5px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
     font-weight: bold;
+    border-radius: 35px; 
+    margin-left: 400px; /* Márgenes laterales más pequeños */
+    margin-right: 400px; /* Márgenes laterales más pequeños */
 }
+
 .cta-button {
     display: inline-block;
     background-color: #f0c040;
@@ -106,7 +112,7 @@ img {
     color: #f0c040;
 }
 
-/* Featured Products */
+
 .featured-products {
     padding: 2rem;
     text-align: center;
@@ -168,7 +174,7 @@ img {
 .green-text {
     color: green;
 }
-/* Footer */
+
 .footer {
     background-color: #333;
     color: white;
