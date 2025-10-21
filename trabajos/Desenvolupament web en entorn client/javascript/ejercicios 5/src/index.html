@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de control de la misión Red Planet I. Gestiona y analiza la tripulación de astronautas.">
+  <title>Inventario de Tripulación </title>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1> Panel de Control - Misión Red Planet I </h1>
+  </header>
+
+  <main>
+   
+    <section>
+      <h2>Agregar Astronauta</h2>
+      <form id="formAstronauta">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="rol">Rol:</label>
+        <input type="text" id="rol" required>
+
+        <label for="experiencia">Experiencia (años):</label>
+        <input type="number" id="experiencia" min="1" required>
+
+        <button type="button" id="btnAgregar">Agregar</button>
+      </form>
+      <p id="mensaje" aria-live="polite"></p>
+    </section>
+
+    <hr>
+
+    
+    <section>
+      <h2>Panel de Control</h2>
+      <div class="panel">
+        <button id="btnListar">Listar tripulación</button>
+
+       
+        <input type="text" id="rolFiltro" placeholder="Escribe un rol (ej: piloto)">
+        <button id="btnFiltrar">Filtrar por rol</button>
+
+        <button id="btnMedia">Calcular experiencia media</button>
+      </div>
+      <p id="salida" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
