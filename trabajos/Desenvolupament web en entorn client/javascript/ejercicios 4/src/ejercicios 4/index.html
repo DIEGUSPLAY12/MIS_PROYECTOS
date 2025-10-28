@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comunicaciones Marte</title>
+</head>
+<body>
+    <h1>Comunicaciones Marte</h1>
+    
+    <div>
+        <div>Mensaje:</div>
+        <input type="text" id="msg" placeholder="Escribe tu mensaje">
+    </div>
+    
+    <div>
+        <div>Presión (kPa):</div>
+        <input type="number" id="pressure" placeholder="101.3">
+    </div>
+    
+    <div>
+        <div>Humedad (%):</div>
+        <input type="number" id="humidity" placeholder="55">
+    </div>
+    
+    <button id="btn-encode">Codificar Mensaje</button>
+    <button id="btn-frequency">Calcular Frecuencia</button>
+    <button id="btn-sign">Firmar Transmisión</button>
+    
+    <div id="output">Resultado aparecerá aquí</div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
